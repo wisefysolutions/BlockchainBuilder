@@ -1,0 +1,92 @@
+/* Blockchain Explorer Custom Styles */
+
+/* Code styling */
+code {
+    background-color: var(--bs-dark);
+    padding: 0.2rem 0.4rem;
+    border-radius: 0.25rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Transaction tables */
+.table-responsive {
+    overflow-x: auto;
+    border-radius: 0.25rem;
+}
+
+/* Card customization */
+.card {
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Block display */
+.accordion-button:not(.collapsed) {
+    background-color: var(--bs-dark);
+    color: var(--bs-white);
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+}
+
+/* Animation for mining */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.btn-primary:active {
+    animation: pulse 0.5s infinite;
+}
+
+/* Improve readability */
+.text-truncate {
+    max-width: 250px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* Responsive font sizes */
+@media (max-width: 768px) {
+    h3 {
+        font-size: 1.5rem;
+    }
+    
+    h5 {
+        font-size: 1.1rem;
+    }
+}
+
+/* Status indicators */
+.badge {
+    padding: 0.4rem 0.6rem;
+}
+
+/* Block highlighting */
+.accordion-item:first-child .accordion-button {
+    background-color: rgba(25, 135, 84, 0.1);
+}
+
+/* Loading indicator */
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
